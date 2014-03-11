@@ -12,18 +12,18 @@ var clean = require('gulp-clean');
 var bump = require('gulp-bump');
 
 var bintrayopts = {
-	username: 'bintrayuser',
-	organization: 'bintrayorgs';	// default: username
-	repository: 'gulp-plugins',
-	pkg: {
-		name: 'bintraypackage',
-		version: null;			        // default: package.version
-	  desc: null;				          // default: 'Automatically created gulp-bintray package'
-	  licenses?: null;	          // default: ['MIT'] 
-  }
+    username: 'bintrayuser',
+    organization: 'bintrayorgs';  // default: username
+    repository: 'gulp-plugins',
+    pkg: {
+        name: 'bintraypackage',
+        version: null;            // default: package.version
+        desc: null;               // default: 'Automatically created gulp-bintray package'
+        licenses?: null;          // default: ['MIT'] 
+    }
 
-	apikey: '99999999999999999999999999999999999',
-	baseUrl: null;		// default: Bintray.apiBaseUrl
+    apikey: '99999999999999999999999999999999999',
+    baseUrl: null;                // default: Bintray.apiBaseUrl
 }
 
 gulp.task('bump', ['compile'], function(){
