@@ -26,30 +26,24 @@ var bintrayopts = {
     baseUrl: null;                // default: Bintray.apiBaseUrl
 }
 
-gulp.task('bump', ['compile'], function(){
+gulp.task('bump', function() {
     return gulp.src('./package.json')
         .pipe(bump({type:'minor'}))
         .pipe(gulp.dest('./'));
 });
 
-gulp.task('bintray', ['compile', 'bump'], function() {
-    return gulp.src([ '**/*.*', '!node_modules/**' ])
-        .pipe(zip('archive.zip'))	
-        .pipe(gulp.dest('.'))
-        .pipe(bintray(bintrayopts))
-        .pipe(clean())
-        
-gulp.task('bintraysrc', ['compile', 'bump'], function() {
+gulp.task('bintray', ['bump'], function() {
     return gulp.src([ '**/*.*', '!node_modules/**' ])
         .pipe(zip('archive.zip'))	
         .pipe(gulp.dest('.'))
         .pipe(bintray(bintrayopts))
         .pipe(clean())
 
+gulp.task('release', ['bump', 'bintray' ], function() {
+    console.log('Released minor version ' + require('./package.json').version);
 });
 
 ```
-
 Credits:
 ========
 
