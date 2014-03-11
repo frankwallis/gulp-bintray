@@ -1,7 +1,7 @@
 {
   "name": "gulp-bintray",
   "description": "A gulp task for uploading files to Bintray",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "homepage": "https://github.com/frankwallis/gulp-bintray",
   "author": {
     "name": "Frank Wallis",
