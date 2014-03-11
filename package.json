@@ -1,6 +1,6 @@
 {
   "name": "gulp-bintray",
-  "description": "A gulp task for uploading files Bintray",
+  "description": "A gulp task for uploading files to Bintray",
   "version": "0.2.0",
   "homepage": "https://github.com/frankwallis/gulp-bintray",
   "author": {

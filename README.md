@@ -1,7 +1,7 @@
 gulp-bintray
 ============
 
-gulp task to upload files to bintray
+A gulp task for uploading files to Bintray
 
 example usage: 
 ```javascript
