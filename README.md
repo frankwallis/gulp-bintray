@@ -4,7 +4,7 @@ gulp-bintray
 gulp task to upload files to bintray
 
 example usage: 
-
+```javascript
 var gulp = require('gulp');
 var zip = require('gulp-zip');
 var bintray = require('./lib/index.js');
@@ -48,7 +48,10 @@ gulp.task('bintraysrc', ['compile', 'bump'], function() {
 
 });
 
-credits: 
+```
 
-https://github.com/shayke/grunt-bintray-deploy
-https://github.com/h2non/node-bintray
+Credits:
+========
+
+- https://github.com/shayke/grunt-bintray-deploy
+- https://github.com/h2non/node-bintray
