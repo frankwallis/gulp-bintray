@@ -1,7 +1,7 @@
 {
   "name": "gulp-bintray",
   "description": "A gulp task for uploading files Bintray",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "homepage": "https://github.com/frankwallis/gulp-bintray",
   "author": {
     "name": "Frank Wallis",
@@ -27,6 +27,12 @@
   "scripts": {
     "test": "gulp test"
   },
+  "dependencies": {
+    "q": "1.0.0",
+    "bintray": "^0.1.0",
+    "gulp-util": "^2.2.14",
+    "through2": "^0.4.1"
+  },
   "devDependencies": {
     "gulp": "^3.5.5",
     "gulp-tsc": "^0.5.0",
@@ -41,11 +47,5 @@
     "deploy",
     "upload",
     "gulpplugin"
-  ],
-  "dependencies": {
-    "q": "1.0.0",
-    "bintray": "^0.1.0",
-    "gulp-util": "^2.2.14",
-    "through2": "^0.4.1"
-  }
+  ]
 }

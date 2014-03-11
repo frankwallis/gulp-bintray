@@ -31,6 +31,9 @@ interface IBintrayOptions {
 	baseUrl?: string;		// default: Bintray.apiBaseUrl
 }
 
+// Gulp plugin to upload files to bintray
+// For example usage see gulpfile.js
+
 function bintray(options: any) {
     // setup some defaults
 	options.organization = options.organization || options.username;
