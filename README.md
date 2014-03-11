@@ -47,5 +47,6 @@ gulp.task('release', ['bump', 'bintray' ], function() {
 Credits:
 ========
 
+- Shay Yaakov
 - https://github.com/shayke/grunt-bintray-deploy
 - https://github.com/h2non/node-bintray

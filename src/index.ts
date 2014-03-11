@@ -2,6 +2,7 @@
  * gulp-bintray
  * https://github.com/frankwallis/gulp-bintray
  *
+ * Copyright (c) 2013 Shay Yaakov
  * Copyright (c) 2014 Frank Wallis
  * Licensed under the MIT license.
  */
