@@ -28,7 +28,7 @@ var bintrayopts = {
 
 gulp.task('compile', function() {
     return gulp.src(paths.src)
-        .pipe(tsc(tscopts, this))
+        .pipe(tsc(tscopts))
         .pipe(gulp.dest(paths.dest));
 });
  
@@ -36,12 +36,6 @@ gulp.task('bump', ['compile'], function(){
     return gulp.src('./package.json')
         .pipe(bump({type:'minor'}))
         .pipe(gulp.dest('./'));
-});
-
-gulp.task('bintray', function() {
-    return gulp.src([ '**/*.*', '!node_modules/**' ])
-        .pipe(bintray(bintrayopts))
-        //.pipe(gulp.dest('./dist/'));
 });
 
 gulp.task('bintray', ['compile', 'bump'], function() {
