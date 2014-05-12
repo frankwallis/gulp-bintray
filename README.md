@@ -7,7 +7,7 @@ example usage:
 ```javascript
 var gulp = require('gulp');
 var zip = require('gulp-zip');
-var bintray = require('./lib/index.js');
+var bintray = require('gulp-bintray');
 var clean = require('gulp-clean');
 var bump = require('gulp-bump');
 
@@ -24,7 +24,7 @@ var bintrayopts = {
 
     apikey: '99999999999999999999999999999999999',
     baseUrl: null;                // default: Bintray.apiBaseUrl
-}
+};
 
 gulp.task('bump', function() {
     return gulp.src('./package.json')
@@ -38,6 +38,7 @@ gulp.task('bintray', ['bump'], function() {
         .pipe(gulp.dest('.'))
         .pipe(bintray(bintrayopts))
         .pipe(clean())
+});
 
 gulp.task('release', ['bump', 'bintray' ], function() {
     console.log('Released minor version ' + require('./package.json').version);
